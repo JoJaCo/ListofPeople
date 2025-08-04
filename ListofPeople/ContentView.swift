@@ -9,14 +9,14 @@ import SwiftUI
 
 
 struct ContentView: View {
+    //MARK: - Data Model
     struct Department: Identifiable {
         let name: String
         let id = UUID()
     }
 
-
+    //MARK: - Department Data
     private var department = [
-        //our departments
         Department(name: "Production"),
         Department(name: "Shipping"),
         Department(name: "Load - in"),
@@ -31,14 +31,15 @@ struct ContentView: View {
         Department(name: "Safety"),        
     ]
 
-
+    // MARK: - View
     var body: some View {
-        List(department) {
-            Text($0.name)
+        NavigationStack {
+            List(department, id: \.id) { department in
+                Text(department.name).font(.headline)
+            }
+            .navigationBarTitle("Departments for TS").listStyle(.grouped)
         }
     }
-        
-  
 }
 
 #Preview {
