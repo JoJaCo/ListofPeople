@@ -16,6 +16,7 @@ struct ContentView: View {
 
 
     private var department = [
+        //our departments
         Department(name: "Production"),
         Department(name: "Shipping"),
         Department(name: "Load - in"),
