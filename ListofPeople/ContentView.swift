@@ -7,16 +7,37 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+    struct Department: Identifiable {
+        let name: String
+        let id = UUID()
     }
+
+
+    private var department = [
+        Department(name: "Production"),
+        Department(name: "Shipping"),
+        Department(name: "Load - in"),
+        Department(name: "Seed"),
+        Department(name: "Cold Storage"),
+        Department(name: "Washline"),
+        Department(name: "Maintenance"),
+        Department(name: "Washline"),
+        Department(name: "Engineering"),
+        Department(name: "Sanitation"),
+        Department(name: "Quality Control"),
+        Department(name: "Safety"),        
+    ]
+
+
+    var body: some View {
+        List(department) {
+            Text($0.name)
+        }
+    }
+        
+  
 }
 
 #Preview {
