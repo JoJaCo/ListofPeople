@@ -29,12 +29,17 @@
 		EC3E0B0F2E3DDE120097F320 /* ListofPeopleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListofPeopleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EC3E0AFA2E3DDE0F0097F320 /* ListofPeople */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ListofPeople;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EC3E0B8D2E4229450097F320 /* Exceptions for "ListofPeople" folder in "ListofPeople" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Untitled.swift,
+			);
+			target = EC3E0AF72E3DDE0F0097F320 /* ListofPeople */;
 		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		EC3E0B082E3DDE120097F320 /* ListofPeopleTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ListofPeopleTests;
@@ -43,6 +48,14 @@
 		EC3E0B122E3DDE120097F320 /* ListofPeopleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ListofPeopleUITests;
+			sourceTree = "<group>";
+		};
+		EC3E0B882E4229350097F320 /* ListofPeople */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EC3E0B8D2E4229450097F320 /* Exceptions for "ListofPeople" folder in "ListofPeople" target */,
+			);
+			path = ListofPeople;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +88,7 @@
 		EC3E0AEF2E3DDE0F0097F320 = {
 			isa = PBXGroup;
 			children = (
-				EC3E0AFA2E3DDE0F0097F320 /* ListofPeople */,
+				EC3E0B882E4229350097F320 /* ListofPeople */,
 				EC3E0B082E3DDE120097F320 /* ListofPeopleTests */,
 				EC3E0B122E3DDE120097F320 /* ListofPeopleUITests */,
 				EC3E0AF92E3DDE0F0097F320 /* Products */,
@@ -108,7 +121,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EC3E0AFA2E3DDE0F0097F320 /* ListofPeople */,
+				EC3E0B882E4229350097F320 /* ListofPeople */,
 			);
 			name = ListofPeople;
 			packageProductDependencies = (

@@ -14,9 +14,19 @@ struct ContentView: View {
         let name: String
         let id = UUID()
     }
-
+    
+    //MARK: - Data Model for people
+    struct Person: Identifiable {
+        let name: String
+        let id = UUID()
+    }
+    
+    
+    //private var people = []
+    
     //MARK: - Department Data
     private var department = [
+        Department(name: "Safety"),
         Department(name: "Production"),
         Department(name: "Shipping"),
         Department(name: "Load - in"),
@@ -28,13 +38,12 @@ struct ContentView: View {
         Department(name: "Engineering"),
         Department(name: "Sanitation"),
         Department(name: "Quality Control"),
-        Department(name: "Safety"),        
     ]
 
     // MARK: - View
     var body: some View {
         NavigationStack {
-            List(department, id: \.id) { department in
+            List(department) { department in
                 Text(department.name).font(.headline)
             }
             .navigationBarTitle("Departments for TS").listStyle(.grouped)
